@@ -25,7 +25,7 @@ days_30 = ['тридцатое']
 days_20_30 = ['двадцать', 'тридцать']
 month_list = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
 
-current_date = '21.11.2013'
+current_date = '15.08.2013'
 
 day = int(current_date[0:2])
 month = int(current_date[3:5])
@@ -57,6 +57,23 @@ print(date_out, 'года')
 # В списке должно быть n - элементов
 # Подсказка: для получения случайного числа изпользуйте функцию randint() модуля random
 print('\n')
-my_random = input('Введите число: ')
+import random
+my_spisok = []
+i = 0
+my_random = int(input('Введите число элементов списка: '))
+while i <= my_random:
+	my_spisok.append(random.randint(-100, 100))
+	i += 1
+print (my_spisok)
+
 # Задача-4: Дан список заполненный произвольными целыми числами
 # Получите новый список, элементами которого будут только уникальные элементы исходного
+print('\n')
+my_spisok_unikum = []
+
+for i in my_spisok:
+	if my_spisok_unikum.count(i) <= 0:
+		my_spisok_unikum.append(i)
+print(my_spisok_unikum)
+no_unikum = len(my_spisok) - len(my_spisok_unikum)
+print('\nКоличество не уникальных чисел = ', no_unikum)
