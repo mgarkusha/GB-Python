@@ -7,6 +7,9 @@
 #Кажется, моё решение через строки было в корне неправильным??? :) пока бросил, подскажите пожалуйста как решать
 def my_round(number, ndigits):
 	big_number = str(number * 10 ** (ndigits + 1)) # + 1 что-бы с точкой не встречаться
+	print(big_number)
+	print(big_number[ndigits + 1:ndigits + 2])
+	print(big_number[:ndigits + 1])
 	if int(big_number[ndigits + 1:ndigits + 2]) >= 5:
 		new_big_number = int(big_number[:ndigits + 1]) + 1
 	else:
@@ -14,7 +17,7 @@ def my_round(number, ndigits):
 	out_number = new_big_number / 10 ** (ndigits)
 	print(out_number)
 
-my_round(3.4274597777, 7)
+my_round(22.2757, 3)
 
 # Задание-2:
 # Дан шестизначный номер билета. Определить, является ли билет счастливым.
