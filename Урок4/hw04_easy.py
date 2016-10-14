@@ -6,7 +6,7 @@ import random
 # квадратами элементов исходного списка
 # [1, 2, 4, 0] --> [1, 4, 16, 0]
 
-my_spisok = [random.randint(0,10) ** 2 for i in range(4)]
+my_spisok = [random.randint(0, 10) ** 2 for i in range(4)]
 print(my_spisok, '\n')
 
 # Задание-2:
@@ -14,11 +14,11 @@ print(my_spisok, '\n')
 fruits1 = ['яблоко', 'банан', 'киви', 'арбуз', 'вишня']
 fruits2 = ['банан', 'арбуз', 'ананас', 'дыня']
 
-#проверка: какой список больше, тот и проверяем
+# проверка: какой список больше, тот и проверяем
 if len(fruits1) > len(fruits2):
-	unikum_fruits = [fruit for fruit in fruits1 if fruits2.count(fruit)]
+    unikum_fruits = [fruit for fruit in fruits1 if fruits2.count(fruit)]
 
-print (unikum_fruits, '\n')
+print(unikum_fruits, '\n')
 
 # Задание-3:
 # Дан список, заполненный произвольными числами. Получить список из элементов исходного, удовлетворяющих след. условиям:
@@ -27,6 +27,5 @@ print (unikum_fruits, '\n')
 # + Элемент не кратен 4
 
 spisok = [random.randint(-100, 100) for _ in range(10)]
-my_spisok = [i for i in spisok if i % 3 == 0 and i % 4 !=0 and i > 0]
-
-print(my_spisok)
+my_spisok = [i for i in spisok if i % 3 == 0 and i % 4 != 0 and i > 0]
+print(my_spisok) if my_spisok else print('Таких чисел нет...')

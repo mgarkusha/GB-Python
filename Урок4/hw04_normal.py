@@ -19,6 +19,7 @@ line = 'ZtmMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNOGI
 # Почему это не хочет работать?
 # print(re.findall('(?<=[A-Z]{1,})[a-z]{1}(?=[A-Z]{1,})', line), '\n')
 
+<<<<<<< Updated upstream
 az = 'abcdefghijklmnopqrstuvwxyz'
 AZ = az.upper()
 i = 0
@@ -33,6 +34,9 @@ try:
 except:
     print(my_spisok)
     print('line[i + 1] Выходит за рамки длинной строки, поэтому try except \n')
+=======
+print(re.findall('[a-z](?=[A-Z])',line))
+>>>>>>> Stashed changes
 
 # Задание-2:
 # Вывести символы в верхнем регистре, которые окружают ровно два символа в нижнем регистре слева
